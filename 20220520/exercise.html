@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>handle Age</title>
+</head>
+<body>
+    <script>
+
+        let ageResult = function (){
+            if(age>18){
+                return "成人";
+            }else if(age < 18 && age >12){
+                return "青少年";
+            }else{
+                return "兒童"
+            }
+        }
+
+        let handleAge = (age)=>{
+            if(age>18){
+                return "成人";
+            }else if(age < 18 && age >12){
+                return "青少年";
+            }else{
+                return "兒童"
+            }
+        }
+        console.log(handleAge(16));
+    </script>
+    
+</body>
+</html>

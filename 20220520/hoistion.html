@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提升 Hoisting</title>
+</head>
+<body>
+    <script>
+        //var 提升
+        console.log(a); //undefined
+        var a =1;
+        //var被提升後，會被初始化為undefined
+
+        //function的提升
+        b();
+        function b(){
+            console.log('b');
+        }
+        //let
+        // console.log(c); // Cannot access 'c' before initialization 沒有初始化，不能被讀取
+        let c = 1;
+
+
+        var d =10;
+        function test(){
+            console.log(d);
+            let d; // Cannot access 'c' before initialization
+        }
+        test()
+
+    </script>
+</body>
+</html>

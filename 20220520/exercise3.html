@@ -8,29 +8,92 @@
   </head>
   <body>
     <script>
+      // ============================= exercise3-1
+
+      //箭頭函式function命名 = (引數)=>{}
       let fibonacciGenerater = (n) => {
-        let sum1 = 0;
-        let sum2 = 1;
-        let arr = [];
+        let sum1 = 0; //第1個數字
+        let sum2 = 1;  //第2個數字
+        let arr = [];//先讓陣列為空陣列
         // console.log(n);
 
-        if (n === 0) {
+        if (n === 1) {
           return [sum1];
-        } else if (n === 1) {
+        } else if (n === 2) {
           return [sum1, sum2];
         } else {
           arr = [0, 1];
           for (let i = 2; i < n; i++) {
             // sum=arr[0]+arr[1]
             sum = arr[i - 2] + arr[i - 1];
-            arr.push(sum)
-            console.log(sum);
+            arr.push(sum);
+            // console.log(sum);
           }
-          return arr
+          return arr; 
+          //回傳陣列
         }
       };
-    //   fibonacciGenerater(10);
-      console.log(fibonacciGenerater(10));
+      //   fibonacciGenerater(10);
+      //   console.log(fibonacciGenerater(10));
+      console.log(fibonacciGenerater(1));
+      console.log(fibonacciGenerater(2));
+      console.log(fibonacciGenerater(8));
+      console.log(fibonacciGenerater(20));
+
+      // ============================= exercise3-2
+      //依凡
+      let fibonacciGenerator2 = (n) => {
+        let tmp1 = 0;
+        let tmp2 = 1;
+        let arr = [];
+        console.log(n);
+        if (n === 0) {
+          arr.push(0);
+        } else if (n === 1) {
+          arr.push(0, 1);
+        } else {
+          for (let i = 0; i < n; i++) {
+            let num = tmp1 + tmp2;
+            arr.push(tmp1);
+            tmp1 = tmp2;
+            tmp2 = num;
+          }
+        }
+        return arr;
+      };
+    //   console.log(fibonacciGenerator2(20));
+
+      // ============================= exercise3-3
+      //家辰
+      let fibonacciGenerator3 = (num) => {
+        let arr = [];
+        if (num == 1) {
+          arr = [0];
+        } else if (num == 2) {
+          arr = [0, 1];
+        } else {
+          arr = [0, 1];
+          for (let i = 2; i < num; i++) {
+            // arr.push(arr[i - 1] + arr[i - 2]);
+            arr = [...arr, arr[i - 1] + arr[i - 2]];
+          }
+        }
+
+        return arr;
+      };
+
+    //   console.log(fibonacciGenerator3(1));
+    //   console.log(fibonacciGenerator3(2));
+    //   console.log(fibonacciGenerator3(20));
+
+    // ============================= exercise3-4
+    // 學姊
+    // let fibonacciGenerater4 =()=>{
+    //     let arr =[0];
+    //     for(let i=1; i <= n-1; i++){
+        
+    //     }
+    // }
     </script>
   </body>
 </html>

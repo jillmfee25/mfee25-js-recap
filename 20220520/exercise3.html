@@ -35,10 +35,10 @@
       };
       //   fibonacciGenerater(10);
       //   console.log(fibonacciGenerater(10));
-      console.log(fibonacciGenerater(1));
-      console.log(fibonacciGenerater(2));
-      console.log(fibonacciGenerater(8));
-      console.log(fibonacciGenerater(20));
+      // console.log(fibonacciGenerater(1));
+      // console.log(fibonacciGenerater(2));
+      // console.log(fibonacciGenerater(8));
+      // console.log(fibonacciGenerater(20));
 
       // ============================= exercise3-2
       //依凡
@@ -88,12 +88,22 @@
 
     // ============================= exercise3-4
     // 學姊
-    // let fibonacciGenerater4 =()=>{
-    //     let arr =[0];
-    //     for(let i=1; i <= n-1; i++){
-        
-    //     }
-    // }
+
+    let fibonacciGenerater4 = (n) => {
+      let arr = [0];
+      for (let i = 1; i <= n - 1; i++) {
+        if (i >= 2) {
+          num = arr[i - 2] + arr[i - 1];
+          arr.push(num);
+        } else {
+          arr.push(i);
+        }
+      }
+      return arr;
+    }
+    console.log(fibonacciGenerater4(20));
+    console.log(fibonacciGenerater4(1));
+    console.log(fibonacciGenerater4(2));
     </script>
   </body>
 </html>

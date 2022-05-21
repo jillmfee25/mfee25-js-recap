@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pass 傳值 vs 傳址</title>
+  </head>
+  <body>
+    <script>
+              //基本型別 傳值
+              let x = 1;
+              let y = x;
+              y++;
+              console.log(x);
+              console.log(y);
+
+              //傳址
+              //物件寫法
+              let car1={
+                  color:'red'
+              };
+              let car2 = car1;
+              car2.color='blue';
+              car2.bradn='Honda'
+              //會覆蓋cart1.color
+              console.log(car1);
+              console.log(car2);
+              // 寫大括號{}就是在物件記憶體位置開新的記憶體
+            //   在沒有用新的{}開新記憶體的情況下
+            //     修改新的變數會影響到本來的變數
+              car2 ={
+                  brand: 'BMW'
+              }
+              console.log(car2);
+
+              let car3={...car1}
+              console.log(car3);
+            //  用展開運算子就能複製一個獨立的記憶體位置
+
+              //展開運算子
+              let lowercase=['a','b','c'];
+              let uppercase =['D','E'];
+              let string='Hello';
+              let all =[1, 2,...lowercase,...uppercase, string];
+              // console.log(all)
+    </script>
+  </body>
+</html>

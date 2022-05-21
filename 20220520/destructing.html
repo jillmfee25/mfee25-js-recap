@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解構賦值 Destructing</title>
+</head>
+<body>
+    <script>
+        let alphabets =['a', 'b', 'c'];
+
+        let [a, b, c]=alphabets;
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+        let fruits = ['蘋果','香蕉', '番茄', '檸檬', '葡萄'];
+        let [apple, banana, , lemon,grape,mango]=fruits;
+        console.log(apple);
+        console.log(banana);
+        // console.log(tomato);
+        console.log(lemon);
+        console.log(mango);
+
+
+        //物件
+        //把本來的變數解構，指派給新的變數
+
+        let countries={
+            taiwan:"台灣",
+            japan:"日本",
+            china:"中國",
+            corea:"韓國",
+        }
+            
+        let {japan, taiwan, corea:korea, china, us }=countries;
+        console.log(japan);
+        console.log(taiwan);
+        console.log(korea);
+        console.log(china);
+        console.log(us);
+
+        
+    </script>
+</body>
+</html>
